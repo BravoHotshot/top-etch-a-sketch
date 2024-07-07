@@ -27,8 +27,6 @@ body {
 .gridbox {
     border: solid 1px burlywood;
     margin: 0;
-    width: 50px;
-    height: 50px;
     background-color: antiquewhite
 }
 
@@ -38,4 +36,18 @@ body {
     padding: 0;
     gap: 0;
     background-color: antiquewhite
+}
+
+.resetgrid {
+    border: none;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: burlywood;
+    margin-bottom: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.resetgrid:hover {
+    background-color: cadetblue;
 }
