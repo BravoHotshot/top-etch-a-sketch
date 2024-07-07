@@ -25,7 +25,9 @@ function createGrid(squareCount) {
 
 function recolour(ev) {
     if (ev.target.getAttribute("class") == "gridbox") {
-        ev.target.style["background-color"] = "aquamarine";
+        const colour =
+        `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        ev.target.style["background-color"] = colour;
     }
 }
 
