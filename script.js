@@ -25,9 +25,19 @@ function createGrid(squareCount) {
 
 function recolour(ev) {
     if (ev.target.getAttribute("class") == "gridbox") {
-        const colour =
-        `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        if (ev.target.style.opacity) {
+            if (ev.target.style.opacity < 1)
+            ev.target.style.opacity = String(Number(ev.target.style.opacity) + 0.1);
+        }
+
+        else {
+            ev.target.style.opacity = "0.1";
+        }
+        const colour = `rgba(${Math.floor(Math.random() * 256)},
+        ${Math.floor(Math.random() * 256)},
+        ${Math.floor(Math.random() * 256)})`;
         ev.target.style["background-color"] = colour;
+        console.log(ev.target.style.opacity);
     }
 }
 
